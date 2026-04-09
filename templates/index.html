@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='beautiful.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1 class ="titulo">
+            CADASTRO DE FILMES
+        </h1>
+    </div>
+
+    <form method="post" action="/cadastro">
+        <label for="nome">Nome:
+            <input class="caixa" type="text" name="nome" id="nome" required>
+        </label>
+        <label for="sinopse">Sinopse:
+            <textarea class="caixa" name="sinopse" id="sinopse" required></textarea>
+        </label>
+        <label for="elenco">Elenco:
+            <input class="caixa" type="text" name="elenco" id="elenco" required>
+        </label>
+        <label for="dtlancamento">Data de Lançamento:
+            <input class="caixa" type="date" name="dtlancamento" id="dtlancamento" required>
+        </label>
+        
+        <button class="button" type="submit">Cadastrar</button>
+    </form>
+    <hr>
+
+    <h2>Lista de Filmes</h2>
+
+    <ul>
+        {% for filme in filmes %}
+            <li>
+                {{filme.nome}} - {{filme.dtlancamento}}
+                <br>Sinopse: {{filme.sinopse}}
+                <br>Estrelando: {{filme.elenco}}
+                <br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

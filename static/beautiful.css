@@ -1,0 +1,75 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(223, 213, 208);
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(56, 21, 0);
+    align-content: center;
+    text-align: center;
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    color: rgb(223, 213, 208)
+}
+
+form {
+    margin-top: auto;
+    width: 50%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(223, 213, 208);
+    padding: 20px;
+    border-right: 1px solid #000000;
+
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.caixa {
+        width: 100%;
+        background-color: rgb(235, 226, 221);
+        padding: 8px;
+        margin-bottom: 8px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+.caixa:focus {
+    border-color:  blue;
+    outline: none;
+}
+
+ button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    background-color: green;
+    color: rgb(223, 213, 208);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    transition: 0.3s;
+}
+
+.button {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+button[type="submit"]:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
