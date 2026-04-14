@@ -12,8 +12,8 @@
             CADASTRO DE FILMES
         </h1>
     </div>
-
-    <form method="post" action="/cadastro">
+    <div class="container">
+          <form method="post" action="/cadastro">
         <label for="nome">Nome:
             <input class="caixa" type="text" name="nome" id="nome" required>
         </label>
@@ -31,17 +31,21 @@
     </form>
     <hr>
 
-    <h2>Lista de Filmes</h2>
+    <div id="lista">
+        <h2>Lista de Filmes</h2>
 
-    <ul>
-        {% for filme in filmes %}
-            <li>
-                {{filme.nome}} - {{filme.dtlancamento}}
-                <br>Sinopse: {{filme.sinopse}}
-                <br>Estrelando: {{filme.elenco}}
-                <br>
-            </li>
-        {% endfor %}
-    </ul>
+        <ul>
+            {% for filme in filmes %}
+                <li>
+                    {{filme.nome}} - {{filme.dtlancamento}}
+                    <br>Sinopse: {{filme.sinopse}}
+                    <br>Estrelando: {{filme.elenco}}
+                    <br>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+  
 </body>
 </html>
