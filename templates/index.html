@@ -29,7 +29,6 @@
         
         <button class="button" type="submit">Cadastrar</button>
     </form>
-    <hr>
 
     <div id="lista">
         <h2>Lista de Filmes</h2>
@@ -41,6 +40,11 @@
                     <br>Sinopse: {{filme.sinopse}}
                     <br>Estrelando: {{filme.elenco}}
                     <br>
+                    <div class="acoes">
+                        <a href="/editar/{{ filme.id }}" class="btn editar">Editar</a>
+                        <a href="/remover/{{ filme.id }}" class="btn remover"
+                        onclick="return confirm('Tem certeza que deseja remover este filme?')">Remover</a>
+                    </div>
                 </li>
             {% endfor %}
         </ul>

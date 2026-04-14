@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Filme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='beautiful-editar.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1 class ="titulo">
+            EDITAR FILME
+        </h1>
+    </div>
+    <div class="container">
+        <form method="post" action="/atualizar/{{ filme.id }}">
+            <label for="nome">Nome:
+                <input class="caixa" type="text" name="nome" id="nome" value="{{ filme.nome }}" required>
+            </label>
+            <label for="sinopse">Sinopse:
+                <textarea class="caixa" name="sinopse" id="sinopse" required>{{ filme.sinopse }}</textarea>
+            </label>
+            <label for="elenco">Elenco:
+                <input class="caixa" type="text" name="elenco" id="elenco" value="{{ filme.elenco }}" required>
+            </label>
+            <label for="dtlancamento">Data de Lançamento:
+                <input class="caixa" type="date" name="dtlancamento" id="dtlancamento" value="{{ filme.dtlancamento }}" required>
+            </label>
+            
+            <button class="button" type="submit">Atualizar</button>
+        </form>
+    </div>
+  
+</body>
+</html>
